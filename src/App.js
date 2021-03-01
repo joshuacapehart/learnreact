@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import colorData from './color-data.json';
 import ColorList from './ColorList.jsx';
+import { v4 } from 'uuid';
 
 function App() {
   const [colors, setColors] = useState(colorData);
@@ -14,6 +15,8 @@ function App() {
       setColors(
         colors.filter(color => color.id !== id)
       )}
+    onAddColor={(title, color) => setColors([...colors, {title, color, id: v4(), rating: 0}])
+    }
   />;
 }
 
