@@ -22,14 +22,14 @@ export default function AddColorForm() {
                 onChange={e => setTitle(e.target.value)}
                 value={title}
                 placeholder="color title..."
-                require
+                required={true}
             />
             <input
                 type="color"
                 onChange={e => setColor(e.target.value)}
                 value={color}
                 placeholder="...color"
-                required
+                required={true}
             />
             <button>ADD</button>
         </form>
