@@ -6,8 +6,6 @@ import { useColors } from './useColors.jsx';
 export default function ColorList() {
     const { colors } = useColors();
 
-    console.log(`in ColorList: ${colors instanceof Array}`);
-
     return (
         <>
             <AddColorForm />
