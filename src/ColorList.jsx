@@ -1,13 +1,18 @@
 import React from 'react';
 import Color from './Color.jsx';
 import AddColorForm from './AddColorForm.jsx';
+import { useColors } from './useColors.jsx';
 
-export default function ColorList({ colors, onChangeRating = (f, x) => f, onRemoveColor = f => f, onAddColor = f => f }) {
+export default function ColorList() {
+    const { colors } = useColors();
+
+    console.log(`in ColorList: ${colors instanceof Array}`);
+
     return (
         <>
-            <AddColorForm onAddColor={onAddColor} />
+            <AddColorForm />
             {colors.map((color, i) =>
-                <Color key={i} {...color} onChangeRating={onChangeRating} onRemove={(onRemoveColor)} />
+                <Color key={i} {...color} />
             )}
         </>
     );

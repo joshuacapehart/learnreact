@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useColors } from './useColors.jsx';
 
-export default function AddColorForm({ onAddColor = f => f }) {
+export default function AddColorForm() {
     const [title, setTitle] = useState("");
     const [color, setColor] = useState("#000000");
+    const { addColor } = useColors();
 
     const submit = (e) => {
         e.preventDefault();
 
-        onAddColor(title, color);
+        addColor(title, color);
 
         setTitle("");
         setColor("#000000");
