@@ -1,3 +1,5 @@
+Example project to learn React hooks and newest features, vs. older class-based syntax.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
